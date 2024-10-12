@@ -11,7 +11,8 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color.red
-                .frame(width: 200, height: 200)
+                .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 200)
+                .cornerRadius(20)
             Text("Your content goes here")
         }
     }
