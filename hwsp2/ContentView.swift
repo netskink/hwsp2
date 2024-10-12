@@ -9,11 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        VStack {
+            Button("Button 1") {}
+                .buttonStyle(.bordered)
+            Button("Button 2", role: .destructive) {}
+                .buttonStyle(.bordered)
+            Button("Button 3") {}
+                .buttonStyle(.borderedProminent)
+            Button("Button 4", role: .destructive) {}
+                .buttonStyle(.borderedProminent)
+        }
         
-        // marking a button as descriptive makes the style different
-        // and effects the voiceover accesiblity.
-        // Note, order matters
-        Button("delete", role: .destructive, action: executeDelete)
     }
     
     func executeDelete() {
