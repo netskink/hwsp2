@@ -14,6 +14,8 @@ struct ContentView: View {
         // This one won't be read by voiceover
         Image(decorative:"US")
         Image(systemName: "flag.checkered.2.crossed")
+            .foregroundStyle(.red)
+            .font(.largeTitle)
     }
     
     func executeDelete() {
