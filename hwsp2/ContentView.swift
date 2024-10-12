@@ -10,8 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        // use action to call a function rather than use closure
-        Button("delete", action: executeDelete)
+        // marking a button as descriptive makes the style different
+        // and effects the voiceover accesiblity.
+        // Note, order matters
+        Button("delete", role: .destructive, action: executeDelete)
     }
     
     func executeDelete() {
