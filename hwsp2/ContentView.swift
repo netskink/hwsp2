@@ -20,7 +20,10 @@ struct ContentView: View {
         Image(systemName: "globe")
             // two way showAlert variable because the ok button automatically dismiss the alert
             .alert("important message", isPresented: $showingAlert) {
-                Button("OK") {}
+                Button("Delete", role: .destructive) {}
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("Please read this important message")
             }
         
     }
