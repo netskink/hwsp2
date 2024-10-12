@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        // background color with gradient
-        Text("your content")
-            .frame(maxWidth:.infinity, maxHeight:.infinity)
-            .foregroundStyle(.white)
-            .background(.indigo.gradient)
+        
+        // the closure prints to the console in xcode
+        Button("content here") {
+            print("hello")
+        }
     }
 }
 
