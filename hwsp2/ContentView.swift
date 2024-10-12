@@ -10,10 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        // the closure prints to the console in xcode
-        Button("content here") {
-            print("hello")
-        }
+        // use action to call a function rather than use closure
+        Button("delete", action: executeDelete)
+    }
+    
+    func executeDelete() {
+        print("doing delete ...")
     }
 }
 
