@@ -16,6 +16,7 @@ struct ContentView: View {
                 .buttonStyle(.bordered)
             Button("Button 3") {}
                 .buttonStyle(.borderedProminent)
+                .tint(.indigo)
             Button("Button 4", role: .destructive) {}
                 .buttonStyle(.borderedProminent)
         }
