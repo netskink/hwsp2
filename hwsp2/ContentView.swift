@@ -9,16 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Button {
-            print("Button was tapped")
-        } label: {
-            Text("Tap me")
-                .padding()
-                .foregroundStyle(.red)
-                .background(Color.blue)
-                .cornerRadius(10)
-        }
-        
+
+        Image("US")
     }
     
     func executeDelete() {
