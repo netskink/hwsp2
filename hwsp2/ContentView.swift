@@ -12,25 +12,40 @@ struct ContentView: View {
 @State var showingAlert = false
     
     var body: some View {
-
-        Button("toggle alert") {
-            showingAlert.toggle()
-        }
         
-        Image(systemName: "globe")
-            // two way showAlert variable because the ok button automatically dismiss the alert
-            .alert("important message", isPresented: $showingAlert) {
-                Button("Delete", role: .destructive) {}
-                Button("Cancel", role: .cancel) {}
-            } message: {
-                Text("Please read this important message")
+        var  countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"]
+
+        var correctAnswer = Int.random(in: 0..<countries.count)
+        // he did 0...2
+        
+        ZStack {
+            Color.blue
+                .ignoresSafeArea()
+            
+        VStack(spacing: 30) {
+            VStack {
+                Text("Tap the flag of")
+                    .foregroundStyle(   .white)
+                
+                Text(countries[correctAnswer])
+                    .foregroundStyle(   .white)
+
+            } // vstack
+            
+            ForEach(0..<3) {
+                number in
+                Button {
+                    // flag was tapped
+                } label: {
+                    Image(countries[number])
+                }
             }
+        }  // vstack
+        } // zstack
+
         
     }
     
-    func executeDelete() {
-        print("doing delete ...")
-    }
 }
 
 #Preview {
